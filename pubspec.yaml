@@ -1,6 +1,6 @@
 name: mattermost_api
 description: An implementation of the Mattermost API as of 4.0.0.
-version: 0.2.0
+version: 0.2.1
 homepage: https://www.jeffmikels.com
 repository: https://github.com/jeffmikels/mattermost_api_dart
 
@@ -10,7 +10,7 @@ environment:
 
 dependencies:
   # Mattermost's API runs over standard http methods and websockets
-  http: ^0.13.4
+  http: ^1.1.0
 
 dev_dependencies:
   lints: ^1.0.0
