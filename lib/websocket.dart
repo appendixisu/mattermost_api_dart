@@ -21,7 +21,7 @@ class MattermostWebsocketClient {
   int _nextSeq = 1;
   WebSocket? _ws;
   final Map<int, Completer<MmWsReply>> _actionCompleters = {};
-  final Map<String, String>? _headers;
+  Map<String, String>? _headers;
 
   // broadcast controllers don't buffer events
   StreamController<MmWsMessage> _messageStreamController = StreamController<MmWsMessage>.broadcast();
@@ -98,6 +98,10 @@ class MattermostWebsocketClient {
 
   Future<MmWsReply> getStatusesByIds(List<String> userIds) {
     return send(MmWsAction.getStatusesByIds(userIds));
+  }
+
+  void setHearder(Map<String, String>? headers) {
+    this._headers = headers;
   }
 }
 
